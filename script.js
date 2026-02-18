@@ -1,4 +1,4 @@
-var a=10;
+/*var a=10;
 console.log(a);
 var b=19;
 console.log(b);
@@ -12,5 +12,13 @@ for (let i = 1; i <= n; i++) {
   pattern += "\n";
 }
 
-console.log(pattern);
- 
+console.log(pattern);*/
+
+/*Named*/
+var name = "Ali";
+ export var Age = 21;
+ var role = "BD";
+ export {role} ; 
+ /*Default*/
+ const name1 = "Sul";
+ export default name1; 

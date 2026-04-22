@@ -15,10 +15,17 @@ for (let i = 1; i <= n; i++) {
 console.log(pattern);*/
 
 /*Named*/
-var name = "Ali";
+/*var name = "Ali";
  export var Age = 21;
  var role = "BD";
- export {role} ; 
+ export {role}; */ 
  /*Default*/
- const name1 = "Sul";
- export default name1; 
+ /*const name1 = "Sul";
+ export default name1; */
+ /*Named Export*/
+ export var role ="BD"
+ var age = 21;
+ export{age};
+ //----------------
+ let job ="BDE";
+ export default job;

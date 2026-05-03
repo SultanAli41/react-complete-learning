@@ -16,6 +16,3 @@ html,body{
   height: 200px;
   background-color: red;
 }
-img{
-  object-fit: contain;
-}

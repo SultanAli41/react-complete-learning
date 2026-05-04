@@ -2,26 +2,29 @@
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
+    color: #fff;
 }
 html,body{
     height:100%;
     width: 100%;
 }
 .parent{
-    height: 100vh;
+    height: auto;
     width: 100%;
     background-color: #111;
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: wrap;
     gap: 30px;
 }
-.card{
+.Card{
     height: 350px;
     width: 260px;
     background-color: #fff;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
+        margin-top: 30px;
 }
 .top{
     height: 20%;

@@ -1,14 +1,9 @@
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-}
-html,body{
-    height: 100%;
-    width: 100%;
-}
-.Header{
-    height: 100%;
-    width: 20%;
-    background-color: lightskyblue;
+.btn {
+    background-color: red;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: fit-content;
+    color: white;
+    cursor: pointer;
 }

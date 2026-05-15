@@ -7,7 +7,7 @@ function LeftCenter() {
              <h3 className='font-bold text-4xl mb-4 leading-10.5 '>Propspective <span>customer</span> segmentation</h3>
              <p className='font-medium text-gray-500'>Lorem ipsum dolor sit amet consectetur  elit. Minus expedita cupiditate exercitationem dolorum, iste labore molestias sit?</p>
       </div>
-        <div className='text-7xl'><i class="ri-arrow-right-up-fill"></i></div>
+        <div className='text-7xl'><i className="ri-arrow-right-up-fill"></i></div>
     </div>
   )
 }

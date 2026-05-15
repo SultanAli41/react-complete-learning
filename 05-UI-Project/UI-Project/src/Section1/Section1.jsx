@@ -1,11 +1,11 @@
 import React from 'react'
 import Nav from './Nav'
 import Center from './center'
-function Section1() {
+function Section1(Props) {
   return (
     <div className='h-screen w-full'>
       <Nav />
-      <Center />
+      <Center users={Props.users}/>
     </div>
   )
 }

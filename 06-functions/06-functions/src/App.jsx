@@ -1,22 +1,13 @@
 import React from 'react'
+import './index.css'
 
 function App() {
-  function btnClicked(){
-    console.log("Button is clicked")
-  }
-  function mouseEnter(){
-    console.log("Mouse is Entered")
-  }
   return (
-    <div>
-<input  onChange={function(elem){
-console.log(elem.target.value);
-}} type="text" placeholder='Enter your Name' />
-
-<div className='box' onMouseMove={function(elem){console.log(elem.clientY);}}></div>
-
+    <div className='main'>
+      <div className='Page1'></div>
+      <div className='Page2'></div>
+      <div className='Page3'></div>
     </div>
-
   )
 }
 

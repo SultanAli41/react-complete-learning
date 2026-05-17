@@ -7,8 +7,30 @@ html,body{
     height: 100%;
     width: 100%;
 }
+/*
 .box{
     height:300px;
     width: 300px;
     background-color: tomato;
+}
+*/
+.main{
+    height: 100%;
+    width: 100%;
+    background-color: burlywood;
+}
+.Page1{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+.Page2{
+    width: 100%;
+    height: 100vh;
+        background-color: gray;
+}
+.Page3{
+    width: 100%;
+    height: 100vh;
+    background-color: lightseagreen;
 }

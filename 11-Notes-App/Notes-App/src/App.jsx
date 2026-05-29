@@ -1,22 +1,54 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const App = () => {
+  const [title,setTitle] =useState("");
+  const [detail,setDetail] =useState("");
   function formhandler(e){
    e.preventDefault();
-   console.log("Submited");
+   console.log(title);
+   console.log(detail);
+   setDetail("");
+   setTitle("");
   }
   return (
-    <div className='bg-zinc-950 h-screen w-screen '>
-      <div className='h-1/2 w-1/3 flex flex-col '>
-<form className='flex flex-col justify-between' 
+    <div className='bg-zinc-950 min-h-screen lg:flex'>
+<form className='flex gap-4 lg:w-1/2 flex-col items-center' 
 onSubmit={(e)=>{formhandler(e)}}>
-        <input type="text" placeholder='Enter Notes Heading' className='h-[50px] w-[70%] border-white-100 text-xl rounded-2xl mt-5 bg-white py-1 px-1' />
-        <textarea name="" id="" placeholder='Enter details here' className='h-[50px] w-[70%] border-white-100 text-xl rounded-2xl mt-5 bg-white py-1 px-1' ></textarea>
-        <button type='submit' className='h-[50px] w-[70%] border-white-100 text-xl rounded-2xl bg-blue-600 text-white  mt-5 py-1 px-1' >Add Notes</button>
+
+  <h1 className='text-white items-center py-3 text-3xl font-bold'>Add Notes</h1>
+        <input
+         type="text" 
+         placeholder='Enter Notes Heading' 
+         className='px-5 w-2/3 font-medium py-2 border-2 outline-none rounded text-white rounded-2xl'
+         value={title}
+         onChange={(e)=>{ setTitle(e.target.value)}}
+          />
+        <textarea 
+        type="text"
+        placeholder='Enter details here'
+        className='px-5 w-2/3 font-medium h-32 py-2  border-2 outline-none text-white rounded-2xl'
+        value={detail}
+        onChange={(e)=>{setDetail(e.target.value)}}
+        ></textarea>
+        <button
+         type='submit'
+        className='bg-blue-600 text-white w-2/3 font-medium py-2 px-5 rounded-3xl' >Add Notes</button>
       </form>
+      
+      
+      <div className='flex flex-col lg:w-1/2 p-2 items-center lg:border-l-2 border-white min-h-screen'>
+      <h1 className='text-white  py-3 font-large text-3xl bold font-bold'>Recent Notes</h1>
+      <div className='flex gap-10 flex-wrap  py-5 px-10 items-start'>
+       
+        <div className='h-60  rounded-3xl bg-white w-44'> 
+          <h1>{Props.heading}</h1>
+          <p>{Props.detail}</p>
+          </div>
+
       </div>
       
-    </div>
+      </div>
+      </div>
   )
 }
 

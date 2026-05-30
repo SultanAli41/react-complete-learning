@@ -3,10 +3,13 @@ import React, { useState } from 'react'
 const App = () => {
   const [title,setTitle] =useState("");
   const [detail,setDetail] =useState("");
+  const [task,setTask] =useState([]);
+  
   function formhandler(e){
    e.preventDefault();
-   console.log(title);
-   console.log(detail);
+    const copyTask =[...task];
+    copyTask.push({title,detail});
+    setTask(copyTask);
    setDetail("");
    setTitle("");
   }
@@ -39,12 +42,12 @@ onSubmit={(e)=>{formhandler(e)}}>
       <div className='flex flex-col lg:w-1/2 p-2 items-center lg:border-l-2 border-white min-h-screen'>
       <h1 className='text-white  py-3 font-large text-3xl bold font-bold'>Recent Notes</h1>
       <div className='flex gap-10 flex-wrap  py-5 px-10 items-start'>
-       
-        <div className='h-60  rounded-3xl bg-white w-44'> 
-          <h1>{Props.heading}</h1>
-          <p>{Props.detail}</p>
-          </div>
-
+       {task.map(function(elem,idx){
+       return <div className='h-52 w-44 bg-white text-2xl text-black rounded-2xl px-2 py-2' key={idx}>
+        <h1 className='text-2xl font-bold'>{elem.title}</h1>
+        <p className='font-1px text-gray-500 text-xs'>{elem.detail}</p>
+        </div>
+       })}
       </div>
       
       </div>

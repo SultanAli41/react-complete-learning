@@ -13,6 +13,12 @@ const App = () => {
    setDetail("");
    setTitle("");
   }
+
+  function delnote(idx){
+    const copyTask = [...task];
+    copyTask.splice(idx,1);
+    setTask(copyTask);
+  }
   return (
     <div className='bg-zinc-950 min-h-screen lg:flex'>
 <form className='flex gap-4 lg:w-1/2 flex-col items-center' 
@@ -43,9 +49,10 @@ onSubmit={(e)=>{formhandler(e)}}>
       <h1 className='text-white  py-3 font-large text-3xl bold font-bold'>Recent Notes</h1>
       <div className='flex gap-10 flex-wrap  py-5 px-10 items-start'>
        {task.map(function(elem,idx){
-       return <div className='h-52 w-44 bg-white text-2xl text-black rounded-2xl px-2 py-2' key={idx}>
+       return <div className='h-52 w-44 bg-white text-2xl text-black rounded-2xl px-3 py-2 flex flex-col '  key={idx}>
         <h1 className='text-2xl font-bold'>{elem.title}</h1>
-        <p className='font-1px text-gray-500 text-xs'>{elem.detail}</p>
+        <p className='font-1px text-gray-500 text-xs mt-1'>{elem.detail}</p>
+        <button className='bg-red-500 text-white text-xl font-bold  rounded mt-17 active:bg-black' onClick={()=>{delnote(idx)}} >Delete</button>
         </div>
        })}
       </div>

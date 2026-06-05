@@ -1,14 +1,14 @@
 import React from 'react'
 
 const App = () => {
-   const name = 'Ali';
-   const age = 21;
-   localStorage.setItem(name,'Ali');
-   localStorage.setItem(age,21);
-   const umar = localStorage.getItem(age);
-    
+  const user = {
+    name:"Ali",
+    age:21
+  }
+  localStorage.setItem("User",JSON.stringify(user));
+   console.log(JSON.parse(localStorage.getItem("User")));
   return (
-   console.log(umar)
+    <h1>Hello</h1>
   )
 }
 

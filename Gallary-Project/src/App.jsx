@@ -11,7 +11,7 @@ async function getdata(){
     <div className='bg-black h-screen text-white'>
       <button className='bg-green-600 text-white rounded m-4 py-2 px-2 active:scale-95'
        onClick={()=>{getdata()}}
-       >Get Data</button>
+       >Get images</button>
     </div>
   )
 }
